@@ -1,0 +1,9 @@
+<h1>Edit Client</h1>
+<%= form_with model:@client do |form| %>
+    <%= form.label :name, "Name"%>
+    <%= form.text_field :name %>
+    <%= form.label :phone, "Phone" %>
+    <%= form.text_field :phone %>
+    <%= form.submit :submit%>
+
+<% end %>

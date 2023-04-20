@@ -1,0 +1,8 @@
+<h1>Show Client>
+<p><%= @client.name %></p><br>
+<p><%= @client.phone %></p>
+<ul>
+  <li><%= link_to "Edit", edit_client_path(@client) %></li>
+  <li> <%= link_to "Destroy", @client ,data: { turbo_method: :delete,
+     turbo_confirm: "Are You Sure?"} %></li>
+</ul>

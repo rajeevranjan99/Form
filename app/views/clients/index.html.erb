@@ -1,0 +1,16 @@
+<h1>Client#index</h1>
+
+    <% @client.each do |client|%>
+       <h1>Client Details</h1>
+        Name:  <%= client.name%><br>
+        Phone: <%= client.phone%><br>
+        <%= link_to "Edit", edit_client_path(client) %>
+        <%= link_to "Destroy", client ,data: { turbo_method: :delete,
+        turbo_confirm: "Are You Sure?"} %>
+    
+
+
+<% end %>
+<div>
+    <%=link_to "New Client", new_client_path(@client)%>
+</div>
